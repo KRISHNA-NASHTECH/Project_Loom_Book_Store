@@ -1,9 +1,12 @@
-package com.bestdeal.bookservice.demo;
+package com.bestdeal.bookservice;
+
+import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class RestCallStatistics {
 
     // to map time with store name that how much time each

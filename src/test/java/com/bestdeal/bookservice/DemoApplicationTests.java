@@ -1,4 +1,4 @@
-package com.bestdeal.bookservice.demo;
+package com.bestdeal.bookservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

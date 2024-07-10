@@ -1,4 +1,4 @@
-package com.bestdeal.bookservice.demo;
+package com.bestdeal.bookservice;
 
 import java.util.List;
 
