@@ -16,9 +16,6 @@ public class BestDealBookController {
 
     public static final ScopedValue<RestCallStatistics> SCOPED_VALUE = ScopedValue.newInstance();
 
-    @Value("${threading.model}")
-    private String threadingModel;
-
     @Autowired
     private BookRetrievalService retrievalService;
 
@@ -29,9 +26,10 @@ public class BestDealBookController {
     private TraditionalBookRetrievalService traditionalBookRetrievalService;
 
     @GetMapping("/book")
-    public BestDealResult getBestPriceForBook(@RequestParam String name) {
+    public BestDealResult getBestPriceForBook(@RequestParam String name, @RequestParam String model) {
         long start = System.currentTimeMillis();
         List<Book> books;
+        String threadingModel = model;
         try {
             if(threadingModel.equalsIgnoreCase("virtual")) {
                 books = ScopedValue.callWhere
